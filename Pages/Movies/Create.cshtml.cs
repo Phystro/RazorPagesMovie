@@ -36,7 +36,7 @@ namespace RazorPagesMovie.Pages.Movies
                 return Page();
             }
 
-            Movie.ReleaseDate = Movie.ReleaseDate.ToUniversalTime();
+            Movie.ReleaseDate = Movie.ReleaseDate.ToUniversalTime().AddHours(3.0);
 
             _context.Movies.Add(Movie);
             await _context.SaveChangesAsync();

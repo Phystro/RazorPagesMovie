@@ -50,6 +50,8 @@ namespace RazorPagesMovie.Pages.Movies
 
             _context.Attach(Movie).State = EntityState.Modified;
 
+            Movie.ReleaseDate = Movie.ReleaseDate.ToUniversalTime().AddHours(3.0);
+
             try
             {
                 await _context.SaveChangesAsync();
