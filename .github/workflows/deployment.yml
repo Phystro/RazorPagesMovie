@@ -35,7 +35,7 @@ jobs:
         SOURCE: "build/publish/"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.REMOTE_TARGET_API }}
+        TARGET: ${{ secrets.REMOTE_TARGET_APP }}
         
     - name: Restart App
       uses: appleboy/ssh-action@master
