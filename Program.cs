@@ -32,4 +32,6 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
-app.Run();
+string? baseAddress = app.Environment.IsProduction() ? app.Configuration["ExecAddress"] : null;
+
+app.Run(baseAddress);
